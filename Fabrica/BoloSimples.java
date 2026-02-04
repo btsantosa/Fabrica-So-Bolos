@@ -2,10 +2,11 @@ package Fabrica;
 
 public class BoloSimples extends Bolo{
 
-    private boolean semLactose = false;
+    private boolean semLactose;
 
     public BoloSimples(int codigo, double custo, IFormato formato) {
         super(codigo, custo, formato);
+        this.semLactose = false;
     }
     public BoloSimples(int codigo, double custo, IFormato formato, boolean semLactose){
         super(codigo, custo, formato);

@@ -1,9 +1,9 @@
 package Fabrica;
 
 public abstract class Bolo implements IBolo{
-    int codigo;
-    double custo;
-    IFormato formato;
+    protected int codigo;
+    protected double custo;
+    protected IFormato formato;
 
     public Bolo(int codigo, double custo){
         this.codigo = codigo;
@@ -16,11 +16,15 @@ public abstract class Bolo implements IBolo{
     }
 
     public boolean equals(Object o){
-        return true;
+        if(this == o) return true;
+        if (o == null) return false;
+        if(o instanceof Bolo) return true;
+        Bolo outro = (Bolo) o;
+        return this.codigo == outro.codigo;
     }
     @Override
     public String toString() {
-        return "Bolo [codigo =" + codigo + ", custo =" + custo + "]";
+        return "Bolo [codigo=" + codigo + ", custo=" + custo + ", formato=" + formato + "]";
     }
     
 }
