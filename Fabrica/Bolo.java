@@ -18,7 +18,7 @@ public abstract class Bolo implements IBolo{
     public boolean equals(Object o){
         if(this == o) return true;
         if (o == null) return false;
-        if(o instanceof Bolo) return true;
+        if(!(o instanceof Bolo)) return true;
         Bolo outro = (Bolo) o;
         return this.codigo == outro.codigo;
     }
